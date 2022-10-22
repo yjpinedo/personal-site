@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = ['1', '2', '3', '4', '5',];
-        return view('blog', ['posts' => $posts]);
+        return view('blog', ['posts' => Post::all()]);
     }
 }
