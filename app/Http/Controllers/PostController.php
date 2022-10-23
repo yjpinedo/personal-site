@@ -34,6 +34,26 @@ class PostController extends Controller
             'body' => $request->input('body'),
         ]);
 
-        return to_route('posts.index')->with('status', 'Post crated');
+        return to_route('posts.index')->with('status', 'Post crated!');
+    }
+
+    public function edit(Post $post)
+    {
+        return view('posts.edit', ['post' => $post]);
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        $request->validate([
+            'title' => ['required', 'min:3', 'max:300'],
+            'body' => ['required', 'min:3', 'max:300'],
+        ]);
+
+        $post->update([
+            'title' => $request->input('title'),
+            'body' => $request->input('body'),
+        ]);
+
+        return to_route('posts.index')->with('status', 'Post updated!');
     }
 }
