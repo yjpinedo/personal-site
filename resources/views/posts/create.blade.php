@@ -3,7 +3,7 @@
     <form action="{{ route('posts.store') }}" method="post">
         @csrf
         <label>
-            Title <br>
+            {{ __('Title') }} <br>
             <input name="title" type="text" value="{{ old('title') }}">
             @error('title')
             <br>
