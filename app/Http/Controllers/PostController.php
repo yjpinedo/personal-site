@@ -9,6 +9,31 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('blog', ['posts' => Post::all()]);
+        return view('posts.index', ['posts' => Post::latest()->get()]);
+    }
+
+    public function show(Post $post)
+    {
+        return view('posts.show', ['post' => $post]);
+    }
+
+    public function create()
+    {
+        return view('posts.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => ['required', 'min:3', 'max:300'],
+            'body' => ['required', 'min:3', 'max:300'],
+        ]);
+
+        Post::create([
+            'title' => $request->input('title'),
+            'body' => $request->input('body'),
+        ]);
+
+        return to_route('posts.index')->with('status', 'Post crated');
     }
 }
