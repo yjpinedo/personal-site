@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -22,18 +23,9 @@ class PostController extends Controller
         return view('posts.create', ['post' => new Post]);
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        $request->validate([
-            'title' => ['required', 'min:3', 'max:300'],
-            'body' => ['required', 'min:3', 'max:300'],
-        ]);
-
-        Post::create([
-            'title' => $request->input('title'),
-            'body' => $request->input('body'),
-        ]);
-
+        Post::create($request->validated());
         return to_route('posts.index')->with('status', 'Post crated!');
     }
 
@@ -42,18 +34,9 @@ class PostController extends Controller
         return view('posts.edit', ['post' => $post]);
     }
 
-    public function update(Request $request, Post $post)
+    public function update(PostRequest $request, Post $post)
     {
-        $request->validate([
-            'title' => ['required', 'min:3', 'max:300'],
-            'body' => ['required', 'min:3', 'max:300'],
-        ]);
-
-        $post->update([
-            'title' => $request->input('title'),
-            'body' => $request->input('body'),
-        ]);
-
+        $post->update($request->validated());
         return to_route('posts.index')->with('status', 'Post updated!');
     }
 }
