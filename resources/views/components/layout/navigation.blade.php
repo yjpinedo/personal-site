@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-white">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32"

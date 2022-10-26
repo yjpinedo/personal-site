@@ -1,1 +1,149 @@
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$french-ski-blue: #70a1ff;
+$lime-soap: #7bed9f;
+$sweet-garden: #55E6C1;
+$red: #dc3545;
+$red-orange: #ff3838;
+
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+//$navbar-light-color : $cyan;
+$navbar-light-brand-color: $primary;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+
+$enable-rounded : false;
+$enable-shadows : true;
+
 @import "bootstrap/scss/bootstrap";
+
+.bg-gray-100 {
+    background-color: $gray-100;
+}
+
+.bg-red-orange {
+    background-color: $red-orange;
+}
+
+.bg-gray-500 {
+    background-color: $gray-500;
+}
+
+.bg-sweet-garden {
+    background-color: $sweet-garden;
+}
+
+.bg-french-ski-blue {
+    background-color: $french-ski-blue;
+}
+
+.bg-indigo {
+    background-color: $indigo;
+}
+
+.bg-purple {
+    background-color: $purple;
+}
+
+.bg-pink {
+    background-color: $pink;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-teal {
+    background-color: $teal;
+}
+
+.bg-cyan {
+    background-color: $cyan;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.btn-yellow {
+    background-color: $yellow;
+}
+
+.btn-gray-100 {
+    background-color: $gray-100;
+}
+
+.btn-gray-500 {
+    background-color: $gray-500;
+}
+
+.btn-sweet-garden {
+    background-color: $sweet-garden;
+    color: white;
+}
+
+.btn-french-ski-blue {
+    background-color: $french-ski-blue;
+    color: white;
+}
+
+.btn-indigo {
+    background-color: $indigo;
+    color: white;
+}
+
+.btn-purple {
+    background-color: $purple;
+    color: white;
+}
+
+.btn-pink {
+    background-color: $pink;
+    color: white;
+}
+
+.btn-green {
+    background-color: $green;
+}
+
+.btn-teal {
+    background-color: $teal;
+}
+
+.btn-cyan {
+    background-color: $cyan;
+}
+
+.btn-red-orange {
+    background-color: $red-orange;
+    color: white;
+}
+.btn-red-orange:hover {
+    background-color: $gray-100;
+}

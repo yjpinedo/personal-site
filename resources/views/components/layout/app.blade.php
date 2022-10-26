@@ -8,7 +8,7 @@
     <title>{{ $title ?? 'Home' }}</title>
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-gray-100">
 <x-layout.navigation/>
 @if(session('status'))
     <div>
