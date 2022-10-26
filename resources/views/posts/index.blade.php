@@ -7,7 +7,7 @@
                 <a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a>
             </h2> &nbsp;
             <a href="{{ route('posts.edit', $post) }}">{{ __('Edit') }}</a> &nbsp;
-            <form action="{{ route('posts.delete', $post) }}" method="post">
+            <form action="{{ route('posts.destroy', $post) }}" method="post">
                 @csrf @method('DELETE')
                 <button type="submit">{{ __('Delete') }}</button>
             </form>
