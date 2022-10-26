@@ -6,7 +6,11 @@
             <h2>
                 <a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a>
             </h2> &nbsp;
-            <a href="{{ route('posts.edit', $post) }}">Edit</a>
+            <a href="{{ route('posts.edit', $post) }}">{{ __('Edit') }}</a> &nbsp;
+            <form action="{{ route('posts.delete', $post) }}" method="post">
+                @csrf @method('DELETE')
+                <button type="submit">{{ __('Delete') }}</button>
+            </form>
         </div>
     @endforeach
 </x-layout.app>

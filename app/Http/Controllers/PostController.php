@@ -39,4 +39,10 @@ class PostController extends Controller
         $post->update($request->validated());
         return to_route('posts.index')->with('status', 'Post updated!');
     }
+
+    public function delete(Post $post)
+    {
+        $post->delete();
+        return to_route('posts.index')->with('status', 'Post deleted!');
+    }
 }
