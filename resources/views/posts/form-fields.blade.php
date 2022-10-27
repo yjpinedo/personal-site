@@ -1,18 +1,14 @@
-<label>
-    {{ __('Title') }} <br>
-    <input name="title" type="text" value="{{ old('title', $post->title) }}">
+<div class="mb-3">
+    <label for="title">{{ __('Title') }}</label>
+    <input id="title" class="form-control" name="title" type="text" value="{{ old('title', $post->title) }}">
     @error('title')
-    <br>
-    <small style="color: red">{{ $message }}</small>
+    <small class="text-danger fw-semibold font-monospace">{{ $message }}</small>
     @enderror
-</label>
-<br>
-<label>
-    Body <br>
-    <textarea name="body" cols="30" rows="5">{{ old('body', $post->body) }}</textarea>
+</div>
+<div class="mb-3">
+    <label for="body">{{ __('Body') }}</label>
+    <textarea id="body" class="form-control" name="body" cols="30" rows="5">{{ old('body', $post->body) }}</textarea>
     @error('body')
-    <br>
-    <small style="color: red">{{ $message }}</small>
+    <small class="fw-semibold font-monospace text-danger">{{ $message }}</small>
     @enderror
-</label>
-<br>
+</div>

@@ -11,6 +11,10 @@ $lime-soap: #7bed9f;
 $sweet-garden: #55E6C1;
 $red: #dc3545;
 $red-orange: #ff3838;
+$neon-blue: #18dcff;
+$pico-8-pink: #fd79a8;
+$shi-moment: #a29bfe;
+$bright-yarrow: #fdcb6e;
 
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -38,8 +42,8 @@ $navbar-light-brand-color: $primary;
 $navbar-light-hover-color: $primary;
 $navbar-light-active-color: $primary;
 
-$enable-rounded : false;
-$enable-shadows : true;
+$enable-rounded: false;
+$enable-shadows: true;
 
 @import "bootstrap/scss/bootstrap";
 
@@ -93,18 +97,41 @@ $enable-shadows : true;
 
 .btn-yellow {
     background-color: $yellow;
+    color: black;
+}
+
+.btn-yellow:hover {
+    background-color: $bright-yarrow;
+    color: black;
 }
 
 .btn-gray-100 {
     background-color: $gray-100;
+    color: black;
+}
+
+.btn-gray-100:hover {
+    background-color: $gray-200;
+    color: black;
 }
 
 .btn-gray-500 {
     background-color: $gray-500;
+    color: black;
+}
+
+.btn-gray-500:hover {
+    background-color: $gray-400;
+    color: black;
 }
 
 .btn-sweet-garden {
     background-color: $sweet-garden;
+    color: white;
+}
+
+.btn-sweet-garden:hover {
+    background-color: $teal;
     color: white;
 }
 
@@ -113,8 +140,18 @@ $enable-shadows : true;
     color: white;
 }
 
+.btn-french-ski-blue:hover {
+    background-color: $shi-moment;
+    color: white;
+}
+
 .btn-indigo {
     background-color: $indigo;
+    color: white;
+}
+
+.btn-indigo:hover {
+    background-color: $purple;
     color: white;
 }
 
@@ -123,27 +160,57 @@ $enable-shadows : true;
     color: white;
 }
 
+.btn-purple:hover {
+    background-color: $indigo;
+    color: white;
+}
+
 .btn-pink {
     background-color: $pink;
     color: white;
 }
 
+.btn-pink:hover {
+    background-color: $pico-8-pink;
+    color: white;
+}
+
 .btn-green {
     background-color: $green;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: $teal;
+    color: white;
 }
 
 .btn-teal {
     background-color: $teal;
+    color: white;
+}
+
+.btn-teal:hover {
+    background-color: $sweet-garden;
+    color: white;
 }
 
 .btn-cyan {
     background-color: $cyan;
+    color: white;
+}
+
+.btn-cyan:hover {
+    background-color: $neon-blue;
+    color: white;
 }
 
 .btn-red-orange {
     background-color: $red-orange;
     color: white;
 }
+
 .btn-red-orange:hover {
-    background-color: $gray-100;
+    background-color: red;
+    color: white;
 }

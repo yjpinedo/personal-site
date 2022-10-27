@@ -11,7 +11,7 @@
 <body class="bg-gray-100">
 <x-layout.navigation/>
 @if(session('status'))
-    <div>
+    <div class="alert alert-success text-center" role="alert">
         {{ session('status') }}
     </div>
 @endif
