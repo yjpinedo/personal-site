@@ -35,14 +35,30 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('register') ? 'active' : '' }}"
-                       href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}"
-                       href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('register') ? 'active' : '' }}"
+                           href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}"
+                           href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">{{ Auth::user()->name }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+
+                            <a class="nav-link"
+                               href="#"
+                                onclick="this.closest('form').submit()">{{ __('logout') }}</a>
+{{--                            <button type="submit" class="btn btn-outline-secondary btn-sm">{{ __('logout') }}</button>--}}
+                        </form>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>

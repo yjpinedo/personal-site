@@ -34,7 +34,7 @@
                             <small class="text-danger fw-semibold font-monospace">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="d-flex justify-content-between">
+                        <div class="float-end">
                             <a class="btn btn-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             <button type="submit" class="btn btn-primary">{{ __('Register') }}</button>
                         </div>
