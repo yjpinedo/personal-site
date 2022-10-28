@@ -46,16 +46,12 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a href="#" class="nav-link">{{ Auth::user()->name }}</a>
-                    </li>
-                    <li class="nav-item">
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
 
                             <a class="nav-link"
                                href="#"
                                 onclick="this.closest('form').submit()">{{ __('logout') }}</a>
-{{--                            <button type="submit" class="btn btn-outline-secondary btn-sm">{{ __('logout') }}</button>--}}
                         </form>
                     </li>
                 @endguest
