@@ -34,10 +34,14 @@
                        href="{{ route('contact') }}">{{ __('Contact') }}</a>
                 </li>
             </ul>
-            <ul class="navbar-nav flex-row">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link"
+                    <a class="nav-link {{ request()->routeIs('register') ? 'active' : '' }}"
                        href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}"
+                       href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
             </ul>
         </div>
