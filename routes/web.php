@@ -9,3 +9,7 @@ Route::view('/contact', 'contact')->name('contact');
 Route::resource('/posts', PostController::class);
 
 Route::view('/about', 'about')->name('about');
+
+Route::get('/login', function (){
+   return 'Login page';
+})->name('login');
