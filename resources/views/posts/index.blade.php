@@ -22,17 +22,18 @@
                             <h5 class="card-title">{{ $post->title }}</h5>
                             <p class="card-text fst-italic">{{ $post->body_format }}</p>
                             @auth
-                                <form action="{{ route('posts.destroy', $post) }}" method="post">
-                                    @csrf @method('DELETE')
-                                    <div class="float-end">
+                                <div class="float-end">
+                                    <form action="{{ route('posts.destroy', $post) }}" method="post">
+                                        @csrf @method('DELETE')
+
                                         <a class="btn btn-outline-light btn-sm text-info"
                                            href="{{ route('posts.show', $post) }}">{{ __('Show') }}</a>
                                         <a class="btn btn-outline-light btn-sm text-warning"
                                            href="{{ route('posts.edit', $post) }}">{{ __('Edit') }}</a>
                                         <button class="btn btn-outline-light btn-sm text-danger"
                                                 type="submit">{{ __('Delete') }}</button>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             @endauth
                         </div>
                     </div>
